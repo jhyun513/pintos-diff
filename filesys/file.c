@@ -159,3 +159,9 @@ file_tell (struct file *file) {
 	ASSERT (file != NULL);
 	return file->pos;
 }
+
+/* Returns whether this file is directory or not. */
+bool
+file_is_dir (struct file *file) {
+	return inode_is_dir(file->inode);
+}
